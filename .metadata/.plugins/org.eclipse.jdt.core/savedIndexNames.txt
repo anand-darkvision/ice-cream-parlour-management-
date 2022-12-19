@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/Users/anandyuva/Desktop/ice cream parlour management/.metadata/.plugins/org.eclipse.jdt.core
+68708958.index
+1865797976.index
+804483193.index
+911871195.index

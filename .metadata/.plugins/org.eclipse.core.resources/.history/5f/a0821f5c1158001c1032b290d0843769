@@ -1,0 +1,103 @@
+package icecream_parlour_management;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class cus_management_adm {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					cus_management_adm window = new cus_management_adm();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public cus_management_adm() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 704, 501);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.WHITE);
+		panel.setBounds(6, 6, 692, 253);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Add customer Details");
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 17));
+		lblNewLabel.setBounds(225, 6, 196, 16);
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("customer Name:");
+		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		lblNewLabel_1.setBounds(6, 50, 134, 16);
+		panel.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("customer ID:");
+		lblNewLabel_2.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		lblNewLabel_2.setBounds(6, 120, 134, 16);
+		panel.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("Customer Ph No:");
+		lblNewLabel_3.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		lblNewLabel_3.setBounds(6, 188, 134, 16);
+		panel.add(lblNewLabel_3);
+		
+		textField = new JTextField();
+		textField.setBounds(184, 46, 130, 26);
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(184, 116, 130, 26);
+		panel.add(textField_1);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(184, 184, 130, 26);
+		panel.add(textField_2);
+		textField_2.setColumns(10);
+		
+		JButton btnNewButton = new JButton("Add");
+		btnNewButton.setBounds(439, 107, 117, 29);
+		panel.add(btnNewButton);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.LIGHT_GRAY);
+		panel_1.setBounds(6, 271, 692, 196);
+		frame.getContentPane().add(panel_1);
+		panel_1.setLayout(null);
+	}
+}

@@ -1,0 +1,76 @@
+package icecream_parlour_management;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class Delete_customer {
+
+	private JFrame frame;
+	private JTextField delete_cus_field;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Delete_customer window = new Delete_customer();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Delete_customer() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 326, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel delete_panel = new JPanel();
+		delete_panel.setBackground(Color.WHITE);
+		delete_panel.setForeground(Color.WHITE);
+		delete_panel.setBounds(6, 6, 314, 260);
+		frame.getContentPane().add(delete_panel);
+		delete_panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Delete Cutomer");
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		lblNewLabel.setBounds(108, 6, 122, 16);
+		delete_panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Customer ID :");
+		lblNewLabel_1.setBounds(6, 49, 102, 16);
+		delete_panel.add(lblNewLabel_1);
+		
+		delete_cus_field = new JTextField();
+		delete_cus_field.setBounds(118, 44, 130, 26);
+		delete_panel.add(delete_cus_field);
+		delete_cus_field.setColumns(10);
+		
+		JButton btnNewButton = new JButton("Delete");
+		btnNewButton.setBounds(84, 142, 117, 29);
+		delete_panel.add(btnNewButton);
+	}
+
+}

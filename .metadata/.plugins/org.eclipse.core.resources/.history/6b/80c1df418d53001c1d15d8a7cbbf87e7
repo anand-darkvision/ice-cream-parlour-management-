@@ -1,0 +1,94 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import java.awt.BorderLayout;
+import javax.swing.JTextPane;
+import javax.swing.JLabel;
+import java.awt.GridLayout;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+
+import ice_cream_parlour_management.admin_window;
+
+import javax.swing.JPasswordField;
+import javax.swing.JEditorPane;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class login_window {
+
+	private JFrame frame;
+	private JPasswordField passwordField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					login_window window = new login_window();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public login_window() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 301, 232);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel user_name = new JLabel("UserName:");
+		user_name.setBounds(10, 38, 75, 16);
+		frame.getContentPane().add(user_name);
+		
+		JLabel pass_word = new JLabel("Password:");
+		pass_word.setBounds(10, 79, 75, 16);
+		frame.getContentPane().add(pass_word);
+		
+		passwordField = new JPasswordField();
+		passwordField.setColumns(10);
+		passwordField.setBounds(105, 74, 159, 26);
+		frame.getContentPane().add(passwordField);
+		
+		JEditorPane user_input = new JEditorPane();
+		user_input.setBounds(108, 38, 152, 16);
+		frame.getContentPane().add(user_input);
+		
+		JLabel lblNewLabel_2 = new JLabel("LOGIN FORM ");
+		lblNewLabel_2.setBounds(105, 6, 91, 16);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		JButton btnNewButton = new JButton("Submit");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			 	if (user_name.equals("admin") && pass_word.equals("admin123")) 
+			 	{
+			 		admin_window adminpage= new admin_window();
+			 		adminpage.setVisible(true);
+			 		
+			 	}
+			 		
+			}
+		});
+		btnNewButton.setBounds(140, 151, 117, 29);
+		frame.getContentPane().add(btnNewButton);
+	}
+}
